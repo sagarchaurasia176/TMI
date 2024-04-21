@@ -4,7 +4,7 @@ import { ButtonWithIcon } from "./LoginButton";
 function TopBar() {
   return (
     <>
-      <nav className=" bg-slate-100 border-b-2 dark:bg-gray-900">
+      <nav className="  bg-white border-b-2 dark:bg-gray-900">
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
           <a
             href="https://flowbite.com"
