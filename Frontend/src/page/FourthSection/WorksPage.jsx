@@ -14,7 +14,6 @@ function WorksPage() {
        flex font-extrabold leading-none tracking-tight
         text-white md:text-5xl lg:text-6xl dark:text-white"
       >
-
         <h1
           class="mb-4 text-3xl font-extrabold text-gray-900
          dark:text-white md:text-5xl lg:text-6xl"
@@ -30,6 +29,8 @@ function WorksPage() {
       </h1>
 
       <br></br>
+      <div className=" sm:h-[160vh]">
+
       <div className=" grid sm:grid-cols-2 ">
         <div className=" p-1 cursor-pointer  transition-all  translate-x-10 anim ">
           <img className=" rounded-md  sm:w-[100vh] " src={code} alt="" />
@@ -39,15 +40,15 @@ function WorksPage() {
             class="  animate-bounce sm:ml-12 text-2xl font-extrabold leading-none tracking-tight
         md:text-5xl space-x-4 lg:text-5xl items-center my-44 text-white dark:text-white"
           >
-            Solve Questions 
+            Solve Questions
             <br></br>
           </h1>
         </div>
       </div>
       <br></br>
 
-      <div className=" grid p-10 sm:grid-cols-2 ">
-        <div>
+      <div className=" grid p-10  sm:grid-cols-2 ">
+        <div className=" bg-black animate-pulse">
           <h1
             class="mb-4 text-4xl font-extrabold leading-none tracking-tight
         md:text-5xl space-x-4 lg:text-6xl text-white dark:text-white"
@@ -68,6 +69,8 @@ function WorksPage() {
         </div>
       </div>
     </div>
+    </div>
+
   );
 }
 

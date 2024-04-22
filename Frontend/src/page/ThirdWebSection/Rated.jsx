@@ -13,7 +13,7 @@ function Rated() {
           </h2>
         </h1>
 
-        <div className="shadow-md p-4 md:h-[40vh] lg:h-[40vh]  sm:h-10">
+        <div className="shadow-md p-4 md:h-[40vh] lg:h-[40vh]   sm:h-10">
           <img src={HappyGif} className="  w-3/5 rounded-lg  ml-20" alt="" />
         </div>
       </div>

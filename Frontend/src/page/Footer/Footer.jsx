@@ -3,12 +3,12 @@ import React from "react";
 function Footer() {
   return (
     <div>
-      <footer class="bg-white dark:bg-gray-900">
+      <footer class="bg-gradient-to-r from-slate-700  w-full  dark:bg-gray-900">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div class="md:flex md:justify-between">
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
                   Resources
                 </h2>
                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
@@ -20,7 +20,7 @@ function Footer() {
                 </ul>
               </div>
               <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
                   Follow us
                 </h2>
                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
@@ -35,7 +35,7 @@ function Footer() {
                 </ul>
               </div>
               <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
                   Legal
                 </h2>
                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
