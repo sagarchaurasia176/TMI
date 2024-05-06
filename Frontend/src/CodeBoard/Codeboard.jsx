@@ -1,4 +1,5 @@
 import React from 'react'
+import Question from './QuestionDocs'
 
 function Codeboard() {
   return (
@@ -7,8 +8,8 @@ function Codeboard() {
 
         comming soon
         </h1>
-
-    </div>
+<Question></Question>
+</div>
   )
 }
 
