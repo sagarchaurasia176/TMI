@@ -7,6 +7,9 @@ import Nextcomponent from "./NextWebSection/Nextcomponent";
 import Rated from "./ThirdWebSection/Rated";
 import { NavLink } from "react-router-dom";
 import TopBar from "./TopBar";
+
+
+
 function HeroSection() {
   return (
     <>
@@ -29,7 +32,7 @@ function HeroSection() {
           </p>
           <br></br>
           {/* login to the next web */}
-          <NavLink to="/Codeboard">
+          <NavLink to="/ResizableDemo">
             <Button>Try TMI For Free</Button>
           </NavLink>
         </div>

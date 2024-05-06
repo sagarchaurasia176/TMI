@@ -1,24 +1,23 @@
-import { Mail } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-import { GoogleOAuthProvider } from "@react-oauth/google";
-import { GoogleLogin } from "@react-oauth/google";
+// import { GoogleOAuthProvider } from "@react-oauth/google";
+// import { GoogleLogin } from "@react-oauth/google";
 import toast from "react-hot-toast";
+import { useGoogleLogin } from "@react-oauth/google";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export function ButtonWithIcon() {
+
+  const login = useGoogleLogin({
+    onSuccess: (tokenResponse) => toast.success("Login Succesfully done"),
+  });
+
   return (
     <>
-      <GoogleOAuthProvider clientId="553721851960-qjhp5u43eek6lcr8ffnsh4ri777kckii.apps.googleusercontent.com">
-        <GoogleLogin
-          onSuccess={(credentialResponse) => {
-           toast.success("login succesfully")
-          }}
-          onError={() => {
-          toast.error("Login Failed ")
-          }}
+      <Link to='/ResizeableDemo'>
+      <Button  onClick={() => login()}>Login</Button>
+      </Link>
 
-        />
-      </GoogleOAuthProvider>
+
     </>
   );
 }

@@ -1,0 +1,39 @@
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "@/components/ui/resizable";
+import CodeBoardNav from "./CodeBoardNav";
+
+export function ResizableDemo() {
+  return (
+    <>
+      <CodeBoardNav />
+
+      <ResizablePanelGroup
+        direction="horizontal"
+        className="min-h-[650px]  w-full border border-slate-950 border-b-white" 
+      >
+        {/* Question parts */}
+        <ResizablePanel defaultSize={25}>
+          <div className="flex h-[500px] items-center justify-center">
+            <span className="font-semibold  text-white ">
+              Question Part (Don't do anything here) 👉 just write code in right
+              section
+              {/* Sidebar */}
+            </span>
+          </div>
+        </ResizablePanel>
+
+        {/* code editor parts */}
+
+        <ResizableHandle withHandle />
+        <ResizablePanel defaultSize={75}>
+          <div className="flex h-[650px]  items-center justify-center">
+            <span className="font-semibold text-white">code editor</span>
+          </div>
+        </ResizablePanel>
+      </ResizablePanelGroup>
+    </>
+  );
+}

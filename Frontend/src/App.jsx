@@ -1,13 +1,15 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import HeroSection from "./page/HeroSection";
-import Codeboard from "./CodeBoard/Codeboard";
+import { ResizableDemo } from "./CodeBoard/ResizableDemo";
+
+
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<HeroSection />}></Route>
-        <Route path="/Codeboard" element={<Codeboard />}></Route>
+        <Route path="/ResizableDemo" element={<ResizableDemo/>}></Route>
       </Routes>
     </>
   );

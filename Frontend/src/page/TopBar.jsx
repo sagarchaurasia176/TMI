@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../img/logo.png";
 import { ButtonWithIcon } from "./LoginButton";
 import { NavLink } from "react-router-dom";
+// import { Button } from "@radix-ui/themes";
 function TopBar() {
   return (
     <>
       <nav className=" bg-gradient-to-r from-white to-slate-700 w-full   border-b-2 dark:bg-gray-900">
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
-          <NavLink to='/' className="flex items-center space-x-3 rtl:space-x-reverse">
+          <NavLink
+            to="/"
+            className="flex items-center space-x-3 rtl:space-x-reverse"
+          >
             <img src={logo} className="h-8" alt="Flowbite Logo" />
             <span className="self-center  text-2xl  font-medium whitespace-nowrap dark:text-white">
               TMI
@@ -16,7 +20,6 @@ function TopBar() {
 
           <div className="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
             <ButtonWithIcon />
-         
             <button
               data-collapse-toggle="mega-menu"
               type="button"
