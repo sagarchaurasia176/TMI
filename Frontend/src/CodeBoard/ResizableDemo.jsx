@@ -8,11 +8,13 @@ import CodeBoardNav from "./CodeBoardNav";
 export function ResizableDemo() {
   return (
     <>
+      {/* navbar components */}
       <CodeBoardNav />
 
+{/* code resizable components */}
       <ResizablePanelGroup
         direction="horizontal"
-        className="min-h-[650px]  w-full border border-slate-950 border-b-white" 
+        className="min-h-[650px]  w-full border border-slate-950 border-b-white"
       >
         {/* Question parts */}
         <ResizablePanel defaultSize={25}>
@@ -24,6 +26,9 @@ export function ResizableDemo() {
             </span>
           </div>
         </ResizablePanel>
+
+
+
 
         {/* code editor parts */}
 
