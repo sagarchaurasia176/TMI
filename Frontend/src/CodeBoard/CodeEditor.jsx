@@ -4,8 +4,9 @@ import React from 'react'
 const CodeEditor = () => {
   return (
     <div>
-<p>hiiii</p>
-<h2>hii this side twoDarray</h2>
+             <h1>Hi this side sagar and aditya</h1>
+        {/* everyone write the code here for making the code editor */}
+        <p>final demo</p>
     </div>
   )
 }
