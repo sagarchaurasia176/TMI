@@ -14,6 +14,9 @@ const CodeBoardNav = () => {
         <Button className=" p-1 rounded-md  text-slate-950  bg-slate-300 ml-40">
           Submit
         </Button>
+        <Button className=" p-1 rounded-md  text-slate-950  bg-slate-300 mr-40">
+          Run
+        </Button>
         <p>currently working on</p>
       </div>
     </div>
