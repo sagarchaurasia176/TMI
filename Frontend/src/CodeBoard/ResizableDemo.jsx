@@ -4,6 +4,7 @@ import {
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
 import CodeBoardNav from "./CodeBoardNav";
+import CodeEditor from "./CodeEditor";
 
 export function ResizableDemo() {
   return (
@@ -35,7 +36,10 @@ export function ResizableDemo() {
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize={75}>
           <div className="flex h-[650px]  items-center justify-center">
-            <span className="font-semibold text-white">code editor</span>
+            {/* code editor components are */}
+          <CodeEditor/>
+
+            {/* <span className="font-semibold text-white">code editor</span> */}
           </div>
         </ResizablePanel>
       </ResizablePanelGroup>
