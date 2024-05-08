@@ -1,11 +1,11 @@
 import React from 'react'
 
+
 const CodeEditor = () => {
   return (
     <div>
-            <p>code editor part Here</p>
-            <h1>start work</h1>
-        {/* everyone write the code here for making the code editor */}
+<p>hiiii</p>
+<h2>hii this side twoDarray</h2>
     </div>
   )
 }
