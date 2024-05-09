@@ -1,14 +1,18 @@
-import React from 'react'
-
+import React from 'react';
+import { Box } from "@chakra-ui/react";
+import Editor from '@monaco-editor/react';
 
 const CodeEditor = () => {
   return (
-    <div>
-          <h1>hey how are you</h1>
-          <h1>I am good</h1>   
-          <h1>Hii wat bout u</h1>
-    </div>
-  )
+    <Box height="100%" width="100%">
+      <Editor 
+        height="100%"
+        width="100%"
+        defaultLanguage="javascript"
+        defaultValue="// some comment"
+      />
+    </Box>
+  );
 }
 
-export default CodeEditor
+export default CodeEditor;
