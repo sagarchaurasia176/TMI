@@ -16,19 +16,11 @@ export function ResizableDemo() {
       {/* code resizable components */}
       <ResizablePanelGroup
         direction="horizontal"
-<<<<<<< HEAD
         className="min-h-[650px]  w-full border border-slate-950 border-x-4 border-y-4  duration-100 "
       >
         {/* Question parts */}
         <ResizablePanel defaultSize={75}>
           <div className="flex h-[500px] items-center justify-center">
-=======
-        className="min-h-[650px]  w-full border border-slate-950 border-b-8 border-b-white"
-      >
-        {/* Question parts */}
-        <ResizablePanel defaultSize={25}>
-          <div className="flex h-[100%] border border-slate-950 items-center justify-center">
->>>>>>> 267c37a565a99c45b14e46b8af2daa13e23ffc32
             <span className="font-semibold  text-white ">
               Question Part (Don't do anything here) 👉 just write code in right
               section
