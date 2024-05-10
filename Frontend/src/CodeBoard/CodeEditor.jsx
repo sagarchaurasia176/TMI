@@ -15,6 +15,7 @@ const CodeEditor = () => {
         defaultLanguage="javascript"
         defaultValue="// some comment"
       />
+      {/* update  */}
       {/* code editor by aditya */}
     </Box>
   );
