@@ -74,3 +74,20 @@
       @apply bg-background text-foreground;
     }
   }
+
+
+  [data-theme = 'light']{
+    --bg-color : whitesmoke;
+    --text-color : black;
+  }
+
+  [data-theme = "dark"]{
+    --bg-color : rgb(0, 0, 42);
+    --text-color : white;
+  }
+
+
+  #root{
+    background-color: var(--bg-color);
+    color : var(--text-color);
+  }
