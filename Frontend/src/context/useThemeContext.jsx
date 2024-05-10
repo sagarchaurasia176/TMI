@@ -8,8 +8,8 @@ const useThemeContext = () => {
     const ThemeHandler = ()=>{
             SetTheme(!theme);
     }
-
-    //
+    //theme conditios apply here
+    // const 
 
     return (
     <div>useThemeContext</div>
