@@ -5,10 +5,10 @@ import { NavLink } from "react-router-dom";
 const CodeBoardNav = () => {
   return (
     <div>
-      <div className=" flex justify-between p-2 m-auto text-black">
+      <div className=" flex justify-between p-2 m-auto  text-black">
         <NavLink to="/">
           <>
-            <span className=" text-white font-medium    ">TMI</span>
+            <span className=" font-bold text-2xl ">TMI</span>
           </>
         </NavLink>
        
