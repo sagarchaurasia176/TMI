@@ -1,14 +1,16 @@
-import React from 'react'
-
+import React from "react";
 
 const CodeEditor = () => {
   return (
     <div>
-          <h1>hey how are you</h1>
-          <h1>I am good</h1>   
-          <h1>Hii wat bout u</h1>
+      {/* code editor parts here*/}
+      {/* <Editor
+        height="90vh"
+        defaultLanguage="javascript"
+        defaultValue="// some comment"
+      /> */}
     </div>
-  )
-}
+  );
+};
 
-export default CodeEditor
+export default CodeEditor;
