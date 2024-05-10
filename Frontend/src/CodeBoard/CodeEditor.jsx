@@ -12,6 +12,7 @@ const CodeEditor = () => {
         defaultLanguage="javascript"
         defaultValue="// some comment"
       />
+      {/* code editor by aditya */}
     </Box>
   );
 }
