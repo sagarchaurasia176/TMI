@@ -16,11 +16,11 @@ export function ResizableDemo() {
 {/* code resizable components */}
       <ResizablePanelGroup
         direction="horizontal"
-        className="min-h-[650px]  w-full border border-slate-950 border-b-white"
+        className="min-h-[650px]  w-full border border-slate-950 border-b-8 border-b-white"
       >
         {/* Question parts */}
         <ResizablePanel defaultSize={25}>
-          <div className="flex h-[500px] items-center justify-center">
+          <div className="flex h-[100%] border border-slate-950 items-center justify-center">
             <span className="font-semibold  text-white ">
               Question Part (Don't do anything here) 👉 just write code in right
               section
