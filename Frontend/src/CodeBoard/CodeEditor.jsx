@@ -11,7 +11,11 @@ const CodeEditor = () => {
 
       <Editor 
         height='100%'
+<<<<<<< HEAD
         width="100%"
+=======
+                width="100%"
+>>>>>>> 267c37a565a99c45b14e46b8af2daa13e23ffc32
         defaultLanguage="javascript"
         defaultValue="// some comment"
       />
