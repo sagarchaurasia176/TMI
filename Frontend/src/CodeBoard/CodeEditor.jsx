@@ -18,8 +18,8 @@ const CodeEditor = () => {
         value={value}
         onChange={(value) => setValue(value)}
       />
-      {/* update  */}
-      {/* code editor by aditya */}
+  
+
     </Box>
   );
 };
