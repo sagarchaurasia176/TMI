@@ -11,13 +11,12 @@ const ThemeMode = () => {
         {ThemeChange ? (
           <CiDark
             className=" cursor-pointer bg-slate-200
-            size-6  rounded-md duration-100 
-            transition-all
+            size-8  rounded-md duration-300  transition-all 
             text-black"
           />
         ) : (
           <MdDarkMode
-            className=" bg-slate-900 cursor-pointer duration-100 transition-all size-6 text-white rounded-md"
+            className=" bg-slate-900 cursor-pointer duration-100 transition-all size-8 text-white rounded-md"
           />
         )}
       </div>

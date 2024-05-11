@@ -1,4 +1,3 @@
-import React from "react";
 import {
   ResizableHandle,
   ResizablePanel,
@@ -10,35 +9,38 @@ import CodeEditor from "./CodeEditor";
 export function ResizableDemo() {
   return (
     <>
-      {/* navbar components */}
       <CodeBoardNav />
 
-      {/* code resizable components */}
       <ResizablePanelGroup
         direction="horizontal"
-        className="min-h-[650px]  w-full border border-slate-950 border-x-4 border-y-4  duration-100 "
+        className=" rounded-lg border"
       >
-        {/* Question parts */}
-        <ResizablePanel defaultSize={75}>
-          <div className="flex h-[500px] items-center justify-center">
-            <span className="font-semibold  text-white ">
-              Question Part (Don't do anything here) 👉 just write code in right
-              section
-              {/* Sidebar */}
-            </span>
+        <ResizablePanel defaultSize={50}>
+          <div className="flex h-[650px] items-center justify-center p-6">
+            <span className="font-semibold">questions comming soon</span>
           </div>
         </ResizablePanel>
+        <ResizableHandle />
 
-        {/* code editor parts */}
-
-        <ResizableHandle withHandle />
-        <ResizablePanel defaultSize={75}>
-          <div className="flex h-[650px] w-auto  items-center justify-center">
-            {/* code editor components are */}
-            <CodeEditor />
-
-            {/* <span className="font-semibold text-white">code editor</span> */}
-          </div>
+        <ResizablePanel defaultSize={60}>
+          <ResizablePanelGroup direction="vertical">
+            <ResizablePanel defaultSize={15}>
+              <div className="flex h-[10px]  items-center justify-center p-6">
+                <span className="font-semibold">webrtc comming soon .</span>
+                <img
+                  className="   w-12  rounded-lg"
+                  src=" https://cdn.dribbble.com/users/2302913/screenshots/14269824/media/455d819724aa0ace4dab2ce7830f26d3.jpg"
+                  alt=""
+                />
+              </div>
+            </ResizablePanel>
+            <ResizableHandle />
+            <ResizablePanel defaultSize={75}>
+              <div className="flex h-full items-center justify-center p-1 border border-black">
+                <CodeEditor />
+              </div>
+            </ResizablePanel>
+          </ResizablePanelGroup>
         </ResizablePanel>
       </ResizablePanelGroup>
     </>
