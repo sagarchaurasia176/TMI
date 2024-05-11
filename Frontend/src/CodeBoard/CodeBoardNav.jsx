@@ -12,7 +12,7 @@ const CodeBoardNav = () => {
             <span className=" font-bold text-2xl ">TMI</span>
           </>
         </NavLink>
-       
+        {/* <p>new</p> */}
         <Button className=" p-2 rounded-md   text-white bg-slate-900 w-16 mr-40">
         Submit
         </Button>
