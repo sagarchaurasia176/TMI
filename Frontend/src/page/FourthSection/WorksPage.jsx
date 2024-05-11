@@ -7,7 +7,7 @@ import code from "../../img/code.png";
 
 function WorksPage() {
   return (
-    <div>
+    <div className=" bg-slate-950">
       <h1
         class="mb-4 text-4x
       l items-center justify-center
@@ -35,10 +35,10 @@ function WorksPage() {
         <div className=" p-1 cursor-pointer  transition-all  translate-x-10 anim ">
           <img className=" rounded-md  sm:w-[100vh] " src={code} alt="" />
         </div>
-        <div className=" bg-black">
+        <div className=" bg-white ">
           <h1
             class="  animate-bounce sm:ml-12 text-2xl font-extrabold leading-none tracking-tight
-        md:text-5xl space-x-4 lg:text-5xl items-center my-44 text-white dark:text-white"
+        md:text-5xl space-x-4 lg:text-5xl items-center my-44 text-black dark:text-white"
           >
             Solve Questions
             <br></br>
