@@ -13,7 +13,7 @@ import {
         <ResizableHandle />
         <ResizablePanel defaultSize={75}>
           <div className="flex h-full items-center justify-center p-6">
-            <span className="font-semibold">Content</span>
+            <span className="font-semibold">Hii</span>
           </div>
         </ResizablePanel>
       </ResizablePanelGroup>
