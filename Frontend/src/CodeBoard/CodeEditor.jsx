@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from "@chakra-ui/react";
 import Editor from "@monaco-editor/react";
-
+import { useState } from 'react';
 const CodeEditor = () => {
   const [value, setValue] = useState("");
   return (
