@@ -2,7 +2,7 @@ import ThemeMode from "@/page/Theme/ThemeMode";
 import { Button } from "@radix-ui/themes";
 import React from "react";
 import { NavLink } from "react-router-dom";
-import LanguageSelectorBtn from "./LanguageSelectorBtn";
+// import LanguageSelectorBtn from "./LanguageSelectorBtn";
 
 const CodeBoardNav = () => {
   return (
@@ -20,7 +20,7 @@ const CodeBoardNav = () => {
 
           {/* editor btn */}
 
-          <LanguageSelectorBtn/>
+          {/* <LanguageSelectorBtn/> */}
 
        <ThemeMode/>
       </div>

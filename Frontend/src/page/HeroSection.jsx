@@ -32,7 +32,7 @@ function HeroSection() {
           </p>
           <br></br>
           {/* login to the next web */}
-          <NavLink to="/ResizableDemo">
+          <NavLink to="/LanguageSelector">
             <Button>Try TMI For Free</Button>
           </NavLink>
         </div>

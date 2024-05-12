@@ -6,13 +6,13 @@ import { NavLink } from "react-router-dom";
 function TopBar() {
   return (
     <>
-      <nav className=" bg-gradient-to-r from-white to-slate-700 w-full   border-b-2 dark:bg-gray-900">
+      <nav className=" bg-gradient-to-r  from-black to-slate-700 w-full  dark:bg-gray-900">
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
           <NavLink
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img src={logo} className="h-8" alt="Flowbite Logo" />
+            <img src={logo} className="h-8 rounded-lg   animate-pulse " alt="tmi logo" />
             <span className="self-center  text-2xl  font-medium whitespace-nowrap dark:text-white">
               TMI
             </span>
