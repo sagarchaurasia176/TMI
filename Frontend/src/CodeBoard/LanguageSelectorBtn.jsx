@@ -9,14 +9,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { NavLink } from "react-router-dom";
-import { Button } from "@radix-ui/themes";
 
 const LanguageSelectorBtn = () => {
   //entreis means which gives you the arr of the object
   const Languages = Object.keys(LanguageSupportApi);
-  const [clickLngMove , setLngMove] = useState();
-
-  // /
 
   return (
     <>
@@ -34,16 +30,16 @@ const LanguageSelectorBtn = () => {
 
               <SelectContent>
                 {Languages.map((lang, ver) => (
-                  <NavLink to='/ResizableDemo'>
-                    <Button >
-                    <SelectItem value={lang} 
-                  className =' flex flex-1 cursor-pointer duration-200'>
-                  {lang}
-                  </SelectItem>
-                    </Button>
-                  
-                  </NavLink>
-
+                  <div key={ver}>
+                    <NavLink to="/ResizableDemo">
+                      <SelectItem
+                        value={lang}
+                        className=" flex flex-1 cursor-pointer duration-200"
+                      >
+                        {lang}
+                      </SelectItem>
+                    </NavLink>
+                  </div>
                 ))}
               </SelectContent>
             </Select>
