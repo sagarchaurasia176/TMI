@@ -4,7 +4,7 @@ import {
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
 import CodeBoardNav from "./CodeBoardNav";
-import { CardWithForm } from "./CardWithForm";
+import LanguageSelectorBtn from "./LanguageSelectorBtn";
 
 export function ResizableDemo() {
   return (
@@ -37,7 +37,8 @@ export function ResizableDemo() {
             <ResizableHandle />
             <ResizablePanel defaultSize={75}>
               <div className="flex h-full items-center justify-center p-1 border border-black">
-              <CardWithForm/>
+              <LanguageSelectorBtn/>
+            
               </div>
             </ResizablePanel>
           </ResizablePanelGroup>
