@@ -5,6 +5,7 @@ import {
 } from "@/components/ui/resizable";
 import CodeBoardNav from "./CodeBoardNav";
 import LanguageSelectorBtn from "./LanguageSelectorBtn";
+import CodeEditor from "./CodeEditor";
 
 export function ResizableDemo() {
   return (
@@ -36,10 +37,7 @@ export function ResizableDemo() {
             </ResizablePanel>
             <ResizableHandle />
             <ResizablePanel defaultSize={75}>
-              <div className="flex h-full items-center justify-center p-1 border border-black">
-              <LanguageSelectorBtn/>
-            
-              </div>
+              <CodeEditor/>
             </ResizablePanel>
           </ResizablePanelGroup>
         </ResizablePanel>
