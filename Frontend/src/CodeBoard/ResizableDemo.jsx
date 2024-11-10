@@ -22,6 +22,7 @@ export function ResizableDemo() {
         </div>
       </ResizablePanel>
       <ResizableHandle />
+      {/* panel */}
       <ResizablePanel defaultSize={50}>
         <ResizablePanelGroup direction="vertical">
           <ResizablePanel defaultSize={25}>
@@ -37,11 +38,9 @@ export function ResizableDemo() {
           </ResizablePanel>
         </ResizablePanelGroup>
       </ResizablePanel>
+
     </ResizablePanelGroup>
 
-<<<<<<< HEAD
-    
-=======
         <ResizablePanel defaultSize={60}>
           <ResizablePanelGroup direction="vertical">
             <ResizablePanel defaultSize={15}>
@@ -60,8 +59,7 @@ export function ResizableDemo() {
             </ResizablePanel>
           </ResizablePanelGroup>
         </ResizablePanel>
-      </ResizablePanelGroup>
->>>>>>> 4fb34ddeeea996ada46a6f28ddc33392c42a67fb
+      
     </>
   );
 }

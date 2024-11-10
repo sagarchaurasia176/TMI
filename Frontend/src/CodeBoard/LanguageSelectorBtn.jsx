@@ -50,7 +50,6 @@ const LanguageSelectorBtn = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
           <div className=" m-auto flex justify-center ">
             <NavLink to='/ResizableDemo'>
 
@@ -60,7 +59,6 @@ const LanguageSelectorBtn = () => {
           </div>
 =======
           <br />
->>>>>>> 4fb34ddeeea996ada46a6f28ddc33392c42a67fb
         </div>
 
         {/* next header parts apply theere */}
