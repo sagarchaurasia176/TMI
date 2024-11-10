@@ -9,7 +9,9 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HeroSection />}></Route>
-        <Route path="/LanguageSelector" element={<LanguageSelectorBtn/>}
+        <Route
+          path="/LanguageSelector"
+          element={<LanguageSelectorBtn />}
         ></Route>
 
         <Route path="/ResizableDemo" element={<ResizableDemo />}></Route>

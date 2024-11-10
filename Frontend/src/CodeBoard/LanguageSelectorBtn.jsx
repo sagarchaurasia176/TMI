@@ -30,19 +30,26 @@ const LanguageSelectorBtn = () => {
 
               <SelectContent>
                 {Languages.map((lang, ver) => (
+
                   <div key={ver}>
-                    <NavLink to="/ResizableDemo">
                       <SelectItem
                         value={lang}
                         className=" flex flex-1 cursor-pointer duration-200"
                       >
                         {lang}
                       </SelectItem>
-                    </NavLink>
                   </div>
                 ))}
+
               </SelectContent>
             </Select>
+          </div>
+          <div className=" m-auto flex justify-center ">
+            <NavLink to='/ResizableDemo'>
+
+          <button className=" p-2 bg-red-100  rounded-2xl m-auto">Click Next</button>
+            </NavLink>
+
           </div>
         </div>
 

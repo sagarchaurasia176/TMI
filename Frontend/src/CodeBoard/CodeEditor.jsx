@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useContext } from "react";
 import { Box } from "@chakra-ui/react";
 import Editor from "@monaco-editor/react";
-import { useState } from 'react';
+import { ThemeContext } from "@/context/ThemeContext";
+
 const CodeEditor = () => {
-  const [value, setValue] = useState("");
+  const { CodeEditorPromtValue, setCodeEditor } = useContext(ThemeContext);
+  const editorRef = useRef(null);
+  function handleEditorDidMount(editor, monaco) {
+    editorRef.current = editor;
+  }
+
+  // for taking the code input
+  const ChangeHandler = (value) => {
+    setCodeEditor(value); // 'value' is the updated content from the editor
+  };
+
   return (
     <Box
       className=" border  border-black border-x-2"
@@ -11,15 +22,12 @@ const CodeEditor = () => {
       width="100%"
     >
       <Editor
-        height="100%"
-        width="100%"
         defaultLanguage="javascript"
-        defaultValue="// write your code below"
-        value={value}
-        onChange={(value) => setValue(value)}
+        value={CodeEditorPromtValue}
+        defaultValue="//Paste your code and analyze time complexity ❤️"
+        onMount={handleEditorDidMount}
+        onChange={ChangeHandler}
       />
-  
-
     </Box>
   );
 };
