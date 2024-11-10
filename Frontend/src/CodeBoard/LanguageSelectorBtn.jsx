@@ -43,7 +43,14 @@ const LanguageSelectorBtn = () => {
 
               </SelectContent>
             </Select>
+            <br />
+            <div className=" flex justify-center  items-center">
+              <button className=" bg-white p-3 rounded-3xl">
+                Choose Language
+              </button>
+            </div>
           </div>
+<<<<<<< HEAD
           <div className=" m-auto flex justify-center ">
             <NavLink to='/ResizableDemo'>
 
@@ -51,6 +58,9 @@ const LanguageSelectorBtn = () => {
             </NavLink>
 
           </div>
+=======
+          <br />
+>>>>>>> 4fb34ddeeea996ada46a6f28ddc33392c42a67fb
         </div>
 
         {/* next header parts apply theere */}
