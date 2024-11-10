@@ -1,11 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { Box } from "@chakra-ui/react";
 import Editor from "@monaco-editor/react";
 import { ThemeContext } from "@/context/ThemeContext";
+import { PanelGroup, Panel } from "react-resizable-panels";
 
 const CodeEditor = () => {
   const { CodeEditorPromtValue, setCodeEditor } = useContext(ThemeContext);
   const editorRef = useRef(null);
+
   function handleEditorDidMount(editor, monaco) {
     editorRef.current = editor;
   }
@@ -16,19 +18,15 @@ const CodeEditor = () => {
   };
 
   return (
-    <Box
-      className=" border  border-black border-x-2"
-      height="100%"
-      width="100%"
-    >
-      <Editor
-        defaultLanguage="javascript"
-        value={CodeEditorPromtValue}
-        defaultValue="//Paste your code and analyze time complexity ❤️"
-        onMount={handleEditorDidMount}
-        onChange={ChangeHandler}
-      />
-    </Box>
+     
+          <Editor
+            defaultLanguage="javascript"
+            value={CodeEditorPromtValue}
+            defaultValue="//Paste your code and analyze time complexity ❤️"
+            onMount={handleEditorDidMount}
+            onChange={ChangeHandler}
+          />
+     
   );
 };
 

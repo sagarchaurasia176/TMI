@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
-import { GenerativeModel } from "@google/generative-ai";
+// import { GoogleGenerativeAI }  from "@google/generative-ai";
+
 //create context
 const MODALAPI = import.meta.env.VITE_GEMINI_API;
 export const ThemeContext = createContext();
@@ -19,30 +20,27 @@ const ThemeContexts = ({ children }) => {
     document.documentElement.setAttribute("data-theme", ThemeChange);
   }, [ThemeChange]);
 
-  const Prompts = `Analyze the time complexity of the given code and provide a **short** description in 1 sentences: also tell me the space complexity  ${CodeEditorPromtValue}`;
-  const genAI = new GenerativeModel(MODALAPI);
-  // PromptHandler
-  const ClickToCallModal = async () => {
-    try {
-      setLoad(true);
-      // const model = genAI.ger
-      let model = genAI.getGenerativeModel({ model: "gemini-pro" });
-      console.log(model)
-      // const model =genAI.GenerativeModel ({ model: "gemini-pro" });
-      // const model = ({ model: "gemini-pro" });
-      const prompt = await Prompts;
-      alert("are you sure");
-      const result = await model.generateContent(prompt);
-      const response = await result.response;
-      console.log(response);
-      setModal(response);
-      setLoad(false);
-      // error
-    } catch (er) {
-      console.error(er);
-      toast.error("error to analyze your code");
-    }
-  };
+  // const Prompts = `Analyze the time complexity of the given code and provide a **short** description in 1 sentences: also tell me the space complexity  ${CodeEditorPromtValue}`;
+  // const genAI = new GoogleGenerativeAI(MODALAPI);
+  // // PromptHandler
+  // const ClickToCallModal = async () => {
+  //   try {
+  //     setLoad(true);
+  //     // const model = genAI.ger
+  //     let model = genAI.getGenerativeModel({ model: "gemini-pro" });
+  //     const prompt = await Prompts;
+  //     alert("are you sure");
+  //     const result = await model.generateContent(prompt);
+  //     const response = await result.response;
+  //     console.log(response);
+  //     setModal(response);
+  //     setLoad(false);
+  //     // error
+  //   } catch (er) {
+  //     console.error(er);
+  //     toast.error("error to analyze your code");
+  //   }
+  // };
 
   //values passed the data here
   const values = {
@@ -51,7 +49,7 @@ const ThemeContexts = ({ children }) => {
     CodeEditorPromtValue,
     setCodeEditor,
     finalResponseFromModal,
-    ClickToCallModal,
+    // ClickToCallModal,
   };
 
   return (
