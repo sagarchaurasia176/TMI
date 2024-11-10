@@ -6,7 +6,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue
 } from "@/components/ui/select";
 import { NavLink } from "react-router-dom";
 
@@ -30,28 +30,25 @@ const LanguageSelectorBtn = () => {
 
               <SelectContent>
                 {Languages.map((lang, ver) => (
-
                   <div key={ver}>
-                      <SelectItem
-                        value={lang}
-                        className=" flex flex-1 cursor-pointer duration-200"
-                      >
-                        {lang}
-                      </SelectItem>
+                    <SelectItem
+                      value={lang}
+                      className=" flex flex-1 cursor-pointer duration-200"
+                    >
+                      {lang}
+                    </SelectItem>
                   </div>
                 ))}
-
               </SelectContent>
             </Select>
             <br />
-             
           </div>
           <div className=" m-auto flex justify-center ">
-            <NavLink to='/ResizableDemo'>
-
-          <button className=" p-2 bg-red-100  rounded-2xl m-auto">Click Next</button>
+            <NavLink to="/ResizableDemo">
+              <button className=" p-2 bg-red-100  rounded-2xl m-auto">
+                Click Next
+              </button>
             </NavLink>
-
           </div>
 
           <br />

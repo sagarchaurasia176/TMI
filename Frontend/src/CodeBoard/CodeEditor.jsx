@@ -18,15 +18,14 @@ const CodeEditor = () => {
   };
 
   return (
-     
-          <Editor
-            defaultLanguage="javascript"
-            value={CodeEditorPromtValue}
-            defaultValue="//Paste your code and analyze time complexity ❤️"
-            onMount={handleEditorDidMount}
-            onChange={ChangeHandler}
-          />
-     
+    <Editor
+      defaultLanguage="javascript"
+      name = "CodeEditorPromtValue"
+      value={CodeEditorPromtValue}
+      defaultValue="//Paste your code and analyze time complexity ❤️"
+      onMount={handleEditorDidMount}
+      onChange={ChangeHandler}
+    />
   );
 };
 

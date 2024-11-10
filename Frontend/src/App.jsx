@@ -3,6 +3,7 @@ import "./App.css";
 import HeroSection from "./page/HeroSection";
 import { ResizableDemo } from "./CodeBoard/ResizableDemo";
 import LanguageSelectorBtn from "./CodeBoard/LanguageSelectorBtn";
+import InterviewExp from "./UserDashboard/InterviewExp";
 
 function App() {
   return (
@@ -13,8 +14,8 @@ function App() {
           path="/LanguageSelector"
           element={<LanguageSelectorBtn />}
         ></Route>
-
         <Route path="/ResizableDemo" element={<ResizableDemo />}></Route>
+        <Route path="/InterviewExp" element={<InterviewExp />}></Route>
       </Routes>
     </>
   );

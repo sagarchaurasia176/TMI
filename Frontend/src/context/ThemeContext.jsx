@@ -1,55 +1,55 @@
 import React, { createContext, useEffect, useState } from "react";
-// import { GoogleGenerativeAI }  from "@google/generative-ai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import toast from "react-hot-toast";
 
-//create context
 const MODALAPI = import.meta.env.VITE_GEMINI_API;
 export const ThemeContext = createContext();
-//theme contexts function apply here
+
 const ThemeContexts = ({ children }) => {
   const [CodeEditorPromtValue, setCodeEditor] = useState("");
   const [finalResponseFromModal, setModal] = useState("");
   const [theme, setTheme] = useState(false);
-  //userClickbale functions apply here
+  const [load, setLoad] = useState(false);
+
   const ThemeChanger = () => {
     setTheme(!theme);
   };
-  //theme conditios apply here
   const ThemeChange = theme ? "light" : "dark";
-  //this is the attribute which directly move to the html doc page
+
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", ThemeChange);
   }, [ThemeChange]);
 
-  // const Prompts = `Analyze the time complexity of the given code and provide a **short** description in 1 sentences: also tell me the space complexity  ${CodeEditorPromtValue}`;
-  // const genAI = new GoogleGenerativeAI(MODALAPI);
-  // // PromptHandler
-  // const ClickToCallModal = async () => {
-  //   try {
-  //     setLoad(true);
-  //     // const model = genAI.ger
-  //     let model = genAI.getGenerativeModel({ model: "gemini-pro" });
-  //     const prompt = await Prompts;
-  //     alert("are you sure");
-  //     const result = await model.generateContent(prompt);
-  //     const response = await result.response;
-  //     console.log(response);
-  //     setModal(response);
-  //     setLoad(false);
-  //     // error
-  //   } catch (er) {
-  //     console.error(er);
-  //     toast.error("error to analyze your code");
-  //   }
-  // };
+  const Prompts = `analyze it and only tell me where I need to improve in step by step:${CodeEditorPromtValue}`;
+  const genAI = new GoogleGenerativeAI(MODALAPI);
 
-  //values passed the data here
+  const ClickToCallModal = async () => {
+    const toastID = toast.loading("Loading...");
+    try {
+      setLoad(true);
+
+      let model = await genAI.getGenerativeModel({ model: "gemini-pro" });
+      const result = await model.generateContent(Prompts);
+      const response = result.response?.text || "";
+
+      setModal(response);
+      toast.success("Response received!");
+    } catch (error) {
+      console.error("Error fetching response:", error);
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setLoad(false);
+      toast.dismiss(toastID);
+    }
+  };
+
   const values = {
     ThemeChanger,
     ThemeChange,
     CodeEditorPromtValue,
     setCodeEditor,
     finalResponseFromModal,
-    // ClickToCallModal,
+    ClickToCallModal,
   };
 
   return (
