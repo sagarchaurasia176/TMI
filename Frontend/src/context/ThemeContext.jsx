@@ -34,6 +34,7 @@ const ThemeContexts = ({ children }) => {
 
       setModal(response);
       toast.success("Response received!");
+      setLoad(false)
     } catch (error) {
       console.error("Error fetching response:", error);
       toast.error("An error occurred. Please try again.");

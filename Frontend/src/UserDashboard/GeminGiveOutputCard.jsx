@@ -11,9 +11,8 @@ const GeminGiveOutputCard = () => {
   const { finalResponseFromModal } = useContext(ThemeContext);
   return (
     // left bar
-    <div className=" flex flex-row ">
-      <div className=" text-white bg-white  p-12 h-[92vh]"></div>
-
+    <div className=" flex ">
+      <div className=" text-white p-12"></div>
       {/* card op */}
       <div className=" block p-12">
         <Card>

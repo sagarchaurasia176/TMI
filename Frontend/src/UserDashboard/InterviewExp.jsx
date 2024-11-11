@@ -21,23 +21,20 @@ const InterviewExp = () => {
   return (
     <div className=" bg-slate-900 w-full h-screen text-white">
       <header className="px-4 lg:px-6 h-14 flex items-center justify-center border-b  dark:bg-gray-800">
-      <div className=" flex">
-      <Link className="flex items-center justify-center" to='/'>
-          <Code className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-          <span className="ml-2 text-lg font-bold">TMI</span>
-        </Link>   
+        <div className=" flex">
+          <Link className="flex items-center justify-center" to="/">
+            <Code className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+            <span className="ml-2 text-lg font-bold">TMI</span>
+          </Link>
         </div>
-        
+
         <div className=" flex  justify-center items-center">
           <span className=" ml-[32rem] capitalize  text-lg font-bold text-red-400">
-          Mock Interview Results
+            Mock Interview Results
           </span>
-      </div>
-      
-      
-        
+        </div>
+
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          
           <Link
             to="/"
             className="text-sm font-medium hover:underline underline-offset-4"
@@ -61,7 +58,7 @@ const InterviewExp = () => {
         </nav>
       </header>
       <div>
-        <GeminGiveOutputCard/>
+        <GeminGiveOutputCard />
       </div>
     </div>
   );
