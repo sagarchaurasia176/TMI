@@ -15,3 +15,4 @@ where the user can solve some DSA questions based on that AI will give the respo
 ## Screenshots 
 <img width="948" alt="Screenshot 2024-04-21 191126" src="https://github.com/sagarchaurasia176/TMI/assets/101509099/07903803-6e15-4a45-a7c1-bac6c555cc89">
 <img width="946" alt="Screenshot 2024-04-21 191146" src="https://github.com/sagarchaurasia176/TMI/assets/101509099/5e46ee18-71a2-4f6e-814f-ac75939b009e">
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/a0c353d0-a5f5-4feb-9bb9-006abaa856f8">
