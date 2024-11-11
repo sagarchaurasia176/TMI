@@ -4,32 +4,26 @@ import { Button } from "@radix-ui/themes";
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import SubmitCode from "./core/SubmitCode";
-// import LanguageSelectorBtn from "./LanguageSelectorBtn";
 
 const CodeBoardNav = () => {
   return (
-    <div className="">
-      <div className=" flex shadow-sm border border-b-2 justify-between space-x-12  p-2 m-auto">
-        <div className=" ">
+    <div>
+      <div className="flex shadow-sm border border-b-2 justify-between space-x-12 p-2 m-auto">
+        <div>
           <NavLink to="/">
-            <>
-              <span className=" font-bold text-2xl ">TMI</span>
-            </>
+            <span className="font-bold text-2xl">TMI</span>
           </NavLink>
         </div>
 
-        <div className=" space-x-4 flex">
-          <Button className=" p-2 rounded-md    text-white bg-slate-900 ">
-            Timer
-          </Button>
-          <Button className=" p-2 rounded-md   text-white bg-slate-900 ">
-            Next
+        <div className="space-x-4 flex">
 
+
+          <Button className="p-2 rounded-md text-white bg-slate-900">
+            Next
           </Button>
-          {/* <p>new</p> */}
+
           <div>
-          <SubmitCode/>
-          
+            <SubmitCode />
           </div>
         </div>
         <ThemeMode />

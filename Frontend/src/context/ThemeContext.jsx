@@ -20,7 +20,18 @@ const ThemeContexts = ({ children }) => {
     document.documentElement.setAttribute("data-theme", ThemeChange);
   }, [ThemeChange]);
 
-  const Prompts = `analyze it and only tell me where I need to improve in step by step:${CodeEditorPromtValue}`;
+  const Prompts = `
+  Please review the following code and provide a concise report with clear, actionable points:
+  - Correctness: Is the code correct? State 'Yes' or 'No' and give a brief reason if needed.
+  - Improvements: Suggest up to 2 key improvements.
+  - Complexity: Time and space complexity in a brief format (e.g., O(n)).
+  - Best Practices: One relevant best practice or tip.
+  - Overall Verdict: A quick summary in one line (e.g., "Efficient but could handle edge cases better").
+
+  Code to analyze:
+  ${CodeEditorPromtValue}
+`;
+
   const genAI = new GoogleGenerativeAI(MODALAPI);
 
   const ClickToCallModal = async () => {
@@ -30,11 +41,17 @@ const ThemeContexts = ({ children }) => {
 
       let model = await genAI.getGenerativeModel({ model: "gemini-pro" });
       const result = await model.generateContent(Prompts);
-      const response = result.response?.text || "";
+      let response = result.response?.text || "";
+
+
+      if (typeof response === "string") {
+        response = response.replace(/(\*\*|\*|_)(.*?)\1/g, "$2"); 
+        response = response.replace(/\n/g, "<br />");
+      }
 
       setModal(response);
       toast.success("Response received!");
-      setLoad(false)
+      setLoad(false);
     } catch (error) {
       console.error("Error fetching response:", error);
       toast.error("An error occurred. Please try again.");

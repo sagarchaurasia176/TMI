@@ -91,3 +91,22 @@
     background-color: var(--bg-color);
     color : var(--text-color);
   }
+
+  .modal-content {
+    padding: 20px;
+  }
+  
+  .section-title {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .section-title + p {
+    margin-top: 10px;
+  }
+  
+  section + section {
+    margin-top: 30px;
+  }
+  
