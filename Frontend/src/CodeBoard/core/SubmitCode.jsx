@@ -20,6 +20,7 @@ const SubmitCode = () => {
   return (
     <div>
       <Dialog>
+        {/* this is dialogue */}
         <DialogTrigger asChild>
           <Button style={{ background: "red" }}>Submit</Button>
         </DialogTrigger>
