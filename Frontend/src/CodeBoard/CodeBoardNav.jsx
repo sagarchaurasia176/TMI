@@ -18,9 +18,9 @@ const CodeBoardNav = () => {
         <div className="space-x-4 flex">
 
 
-          <Button className="p-2 rounded-md text-white bg-slate-900">
+          {/* <Button className="p-2 rounded-md text-white bg-slate-900">
             Next
-          </Button>
+          </Button> */}
 
           <div>
             <SubmitCode />
