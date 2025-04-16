@@ -1,42 +1,76 @@
-// const express = require("express");
-// const cors = require("cors");
-// const multer = require("multer");
-// const fs = require("fs");
-// const axios = require("axios");
-// const FormData = require("form-data");
+const express = require("express");
+const multer = require("multer");
+const cors = require("cors");
+const { OpenAI } = require("openai");
+const fs = require("fs");
+const path = require("path");
 
-// const app = express();
-// app.use(cors());
-// const port = 5000;
+const app = express();
+const upload = multer();
+const api = "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"; // IMPORTANT: Remove your actual API key from here!
+const openai = new OpenAI({ apiKey: api });
 
-// // Multer setup to accept audio file
-// const upload = multer({ dest: "uploads/" });
+// Middleware
+app.use(cors());
+app.use(express.json());
 
-// const OPENAI_API_KEY = "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";
+// Audio file handling
+const audioDir = path.join(__dirname, 'audio');
+if (!fs.existsSync(audioDir)) {
+  fs.mkdirSync(audioDir);
+}
 
-// app.post("/transcribe", upload.single("audio"), async (req, res) => {
-//   const audioPath = req.file.path;
+app.post("/api/voice-agent", upload.single("audio"), async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).send({ error: "No audio file provided" });
+    }
 
-//   try {
-//     const formData = new FormData();
-//     formData.append("file", fs.createReadStream(audioPath));
-//     formData.append("model", "whisper-1");
+    const buffer = req.file.buffer;
+    
+    // Create a file-like object for Whisper API
+    const file = {
+      buffer,
+      name: "recording.webm",
+      type: req.file.mimetype
+    };
 
-//     const response = await axios.post("https://api.openai.com/v1/audio/transcriptions", formData, {
-//       headers: {
-//         "Authorization": `Bearer ${OPENAI_API_KEY}`,
-//         ...formData.getHeaders(),
-//       },
-//     });
+    const transcription = await openai.audio.transcriptions.create({
+      file: file,
+      model: "whisper-1",
+    });
 
-//     fs.unlinkSync(audioPath); // Clean up
-//     res.json({ transcription: response.data.text });
-//   } catch (error) {
-//     console.error("Whisper API Error:", error.response?.data || error.message);
-//     res.status(500).json({ error: "Failed to transcribe" });
-//   }
-// });
+    const chatResponse = await openai.chat.completions.create({
+      messages: [{ role: "user", content: transcription.text }],
+      model: "gpt-4",
+    });
 
-// app.listen(port, () => {
-//   console.log(`Server running on http://localhost:${port}`);
-// });
+    const speech = await openai.audio.speech.create({
+      model: "tts-1",
+      input: chatResponse.choices[0].message.content,
+      voice: "nova",
+    });
+
+    const fileName = `response-${Date.now()}.mp3`;
+    const filePath = path.join(audioDir, fileName);
+    const bufferData = Buffer.from(await speech.arrayBuffer());
+    fs.writeFileSync(filePath, bufferData);
+
+    res.send({ 
+      audioUrl: `http://localhost:5000/audio/${fileName}`,
+      transcription: transcription.text,
+      response: chatResponse.choices[0].message.content
+    });
+  } catch (err) {
+    console.error("Voice agent error:", err);
+    res.status(500).send({ 
+      error: "Voice agent error",
+      details: err.message 
+    });
+  }
+});
+
+// Serve audio files
+app.use("/audio", express.static(audioDir));
+
+app.listen(5000, () => console.log("Voice agent running on http://localhost:5000"));
