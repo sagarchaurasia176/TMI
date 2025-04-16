@@ -1,5 +1,4 @@
 import { ThemeContext } from "@/context/ThemeContext";
-import ThemeMode from "@/page/Theme/ThemeMode";
 import { Button } from "@radix-ui/themes";
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
@@ -26,7 +25,7 @@ const CodeBoardNav = () => {
             <SubmitCode />
           </div>
         </div>
-        <ThemeMode />
+
       </div>
     </div>
   );

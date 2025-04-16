@@ -39,7 +39,7 @@ const ThemeContexts = ({ children }) => {
     try {
       setLoad(true);
 
-      let model = await genAI.getGenerativeModel({ model: "gemini-pro" });
+      let model = await genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
       const result = await model.generateContent(Prompts);
       let response = result.response?.text || "";
 
